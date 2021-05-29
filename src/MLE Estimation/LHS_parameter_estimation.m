@@ -40,8 +40,8 @@ n = size(X,1);
 
 %Initialize sample statistics
 all_cumulative_reps = zeros(n,1);
-all_simulation_output = zeros(n,1);
-all_simulation_output_variances = zeros(n,1);
+response_sum = zeros(n,1);
+response_sum_of_square_differences = zeros(n,1);
 
 
 
@@ -54,7 +54,7 @@ design_points_index = cumprod([1;bound_constraints(:,2)-bound_constraints(:,1) +
 design_points_index = sum(((design_points-repmat(bound_constraints(:,1)',k,1))+1-[zeros(size(design_points,1),1) ones(size(design_points,1),size(design_points,2)-1)]).*repmat(design_points_index(1:end-1),size(design_points,1),1),2);
 
 %Collect simulation output and compute sample statistics
-simulation_output = simulator(design_points);
+simulation_output = simulator(design_points, rep(1));
 simulation_output_variances = var(simulation_output,0,2);
 response_sum(design_points_index) = sum(simulation_output,2);
 response_sum_of_square_differences(design_points_index) = rep(1)*var(simulation_output,1,2);
@@ -64,7 +64,7 @@ response_sum_of_square_differences(design_points_index) = rep(1)*var(simulation_
 
 
 
-[beta, theta] = maximum_likelihood_estimation(all_simulation_output(design_points_index),response_sum_of_square_differences/rep(1),bound_constraints,design_points_index,sobol_bounds, pardiso_flag);
+[beta, theta] = maximum_likelihood_estimation(response_sum(design_points_index)/rep(1),response_sum_of_square_differences(design_points_index)/rep(1),bound_constraints,design_points_index,sobol_bounds, pardiso_flag);
 
 
 eDO = ExperimentalDesign(bound_constraints,sparse(response_sum),sparse(response_sum_of_square_differences),sparse(all_cumulative_reps),design_points_index,beta,theta);

@@ -1,0 +1,270 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+      <link rel="stylesheet" href="file:////usr/local/MATLAB/R2016b/toolbox/matlab/helptools/private/helpwin.css">
+      <title>MATLAB File Help: Metamodel</title>
+   </head>
+   <body>
+      <!--Single-page help-->
+      <table border="0" cellspacing="0" width="100%">
+         <tr class="subheader">
+            <td class="headertitle">MATLAB File Help: Metamodel</td>
+            <td class="subheader-left"><a href="matlab:edit Metamodel">View code for Metamodel</a></td>
+            <td class="subheader-left"><a href="matlab:doc Metamodel">Go to online doc for Metamodel</a></td>
+            <td class="subheader-right"><a href="matlab:doc">Default Topics</a></td>
+         </tr>
+      </table>
+      <div class="title">Metamodel</div>
+      <div class="helptext"><pre><!--helptext --> <span class="helptopic">Metamodel</span> superclass from which GlobalMetamodel and RapidMetamodel
+ inherit common traits.
+    The <span class="helptopic">Metamodel</span> class is an abstract superclass (no objects are
+ instantiated) that contains traits common to GlobalMetamodel and
+ RapidMetamodel objects, assuming there are n solutions and d
+ dimensions.</pre></div><!--after help -->
+      <!--Class-->
+      <div class="sectiontitle">Class Details</div>
+      <table class="class-details">
+         <tr>
+            <td class="class-detail-label">Superclasses</td>
+            <td><a href="matlab:doc('handle')">handle</a></td>
+         </tr>
+         <tr>
+            <td class="class-detail-label">Sealed</td>
+            <td>false</td>
+         </tr>
+         <tr>
+            <td class="class-detail-label">Construct on load</td>
+            <td>false</td>
+         </tr>
+      </table>
+      <!--Constructors-->
+      <div class="sectiontitle"><a name="constructors"></a>Constructor Summary
+      </div>
+      <table class="summary-list">
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.Metamodel')">Metamodel</a></td>
+            <td class="m-help">superclass from which GlobalMetamodel and RapidMetamodel&nbsp;</td>
+         </tr>
+      </table>
+      <!--Properties-->
+      <div class="sectiontitle"><a name="properties"></a>Property Summary
+      </div>
+      <table class="summary-list">
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.MLE_mean')">MLE_mean</a></td>
+            <td class="m-help">Scalar value representing the MLE value of the mean of the GMRF.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.MLE_precision')">MLE_precision</a></td>
+            <td class="m-help">Dense vector dx1 containing the MLE values of the conditional precision of solutions and conditional correlations between
+               solutions.&nbsp;
+            </td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.complete_expected_improvement')">complete_expected_improvement</a></td>
+            <td class="m-help">Dense nx1 vector of CEI values for all solutions in Metamodel object.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.conditional_covariances')">conditional_covariances</a></td>
+            <td class="m-help">Dense nx1 vector of conditional covariances relative to current optimal solution in Metamodel object.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.conditional_means')">conditional_means</a></td>
+            <td class="m-help">Dense nx1 vector of conditional means for all solutions in Metamodel object.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.conditional_precision_matrix')">conditional_precision_matrix</a></td>
+            <td class="m-help">Sparse nxn conditional precision matrix of Metamodel object that is updated as simulation occurs.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.conditional_variances')">conditional_variances</a></td>
+            <td class="m-help">Dense nx1 vector of conditional variances for all solutions in Metamodel object.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.current_optimal_solution')">current_optimal_solution</a></td>
+            <td class="m-help">Scalar value containing the index of the current optimal solution, assuming column-major ordering.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.intrinsic_precision_matrix')">intrinsic_precision_matrix</a></td>
+            <td class="m-help">Sparse nxn intrinsic precision matrix of Metamodel object that is updated as simulation occurs.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.max_cei_solutions')">max_cei_solutions</a></td>
+            <td class="m-help">Scalar/qx1 vector containing the index/indices of either the solution with the largest CEI value or the set of solutions estimated
+               to have the largest q-CEI values.&nbsp;
+            </td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.num_replications')">num_replications</a></td>
+            <td class="m-help">Sparse nx1 vector containing the total number of replications performed for simulated solutions in a Metamodel object, assuming
+               column-major ordering.&nbsp;
+            </td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.num_screening_solutions')">num_screening_solutions</a></td>
+            <td class="m-help">Number of candidate solutions used to construct the q-CEI optimal set, based on their marginal CEI values.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.num_simulation_workers')">num_simulation_workers</a></td>
+            <td class="m-help">Scalar number of available processors available to perform simulations in parallel.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.num_solutions')">num_solutions</a></td>
+            <td class="m-help">Scalar number of feasible solutions in the Metamodel object. For a GlobalMetamodel object, this is the number of solutions
+               in the feasible region. For a RapidMetamodel object, this is the number of solutions in the search set.&nbsp;
+            </td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.pardiso_flag')">pardiso_flag</a></td>
+            <td class="m-help">Binary (0/1) flag to determine whether PARDISO solver is to be used (1) or not (0).&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.precision_matrix')">precision_matrix</a></td>
+            <td class="m-help">Sparse nxn precision matrix of Metamodel object based on MLE estimation.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.response_sample_means')">response_sample_means</a></td>
+            <td class="m-help">Sparse nx1 vector containing the response sample means of simulated solutions.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.response_sample_variances')">response_sample_variances</a></td>
+            <td class="m-help">Sparse nx1 vector containing the response sample variances of simulated solutions.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.response_sum')">response_sum</a></td>
+            <td class="m-help">Sparse nx1 vector containing sum of response across replications for simulated solutions in Metamodel object, assuming column-major
+               ordering.&nbsp;
+            </td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.response_sum_of_square_differences')">response_sum_of_square_differences</a></td>
+            <td class="m-help">Sparse nx1 vector containing sum of square difference between response and mean across replications for simulated solutions
+               in a Metamodel object, assuming column-major ordering.&nbsp;
+            </td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.search_set')">search_set</a></td>
+            <td class="m-help">Dense vector of indices of the solutions chosen to be in the search set. This is left empty in GMIA.&nbsp;</td>
+         </tr>
+      </table>
+      <!--Methods-->
+      <div class="sectiontitle"><a name="methods"></a>Method Summary
+      </div>
+      <table class="summary-list">
+         <tr class="summary-item">
+            <td class="attributes">
+               &nbsp;
+               
+            </td>
+            <td class="name"><a href="matlab:doc('Metamodel.addlistener')">addlistener</a></td>
+            <td class="m-help">Add listener for event.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="attributes">
+               &nbsp;
+               
+            </td>
+            <td class="name"><a href="matlab:doc('Metamodel.compute_complete_expected_improvement')">compute_complete_expected_improvement</a></td>
+            <td class="m-help">Compute CEI values for all solutions in GMRF and return as a vector, assuming column-major ordering.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="attributes">
+               &nbsp;
+               
+            </td>
+            <td class="name"><a href="matlab:doc('Metamodel.delete')">delete</a></td>
+            <td class="m-help">Delete a handle object.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="attributes">
+               &nbsp;
+               
+            </td>
+            <td class="name"><a href="matlab:doc('Metamodel.eq')">eq</a></td>
+            <td class="m-help">== (EQ)   Test handle equality.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="attributes">
+               &nbsp;
+               
+            </td>
+            <td class="name"><a href="matlab:doc('Metamodel.findobj')">findobj</a></td>
+            <td class="m-help">Find objects matching specified conditions.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="attributes">
+               &nbsp;
+               
+            </td>
+            <td class="name"><a href="matlab:doc('Metamodel.findprop')">findprop</a></td>
+            <td class="m-help">Find property of MATLAB handle object.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="attributes">
+               &nbsp;
+               
+            </td>
+            <td class="name"><a href="matlab:doc('Metamodel.ge')">ge</a></td>
+            <td class="m-help">>= (GE)   Greater than or equal relation for handles.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="attributes">
+               &nbsp;
+               
+            </td>
+            <td class="name"><a href="matlab:doc('Metamodel.gt')">gt</a></td>
+            <td class="m-help">> (GT)   Greater than relation for handles.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="attributes">Sealed 
+               &nbsp;
+               
+            </td>
+            <td class="name"><a href="matlab:doc('Metamodel.isvalid')">isvalid</a></td>
+            <td class="m-help">Test handle validity.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="attributes">
+               &nbsp;
+               
+            </td>
+            <td class="name"><a href="matlab:doc('Metamodel.le')">le</a></td>
+            <td class="m-help"><= (LE)   Less than or equal relation for handles.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="attributes">
+               &nbsp;
+               
+            </td>
+            <td class="name"><a href="matlab:doc('Metamodel.lt')">lt</a></td>
+            <td class="m-help">< (LT)   Less than relation for handles.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="attributes">
+               &nbsp;
+               
+            </td>
+            <td class="name"><a href="matlab:doc('Metamodel.ne')">ne</a></td>
+            <td class="m-help">~= (NE)   Not equal relation for handles.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="attributes">
+               &nbsp;
+               
+            </td>
+            <td class="name"><a href="matlab:doc('Metamodel.notify')">notify</a></td>
+            <td class="m-help">Notify listeners of event.&nbsp;</td>
+         </tr>
+      </table>
+      <!--Events-->
+      <div class="sectiontitle"><a name="events"></a>Event Summary
+      </div>
+      <table class="summary-list">
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('Metamodel.ObjectBeingDestroyed')">ObjectBeingDestroyed</a></td>
+            <td class="m-help">Notifies listeners that a particular object has been destroyed.&nbsp;</td>
+         </tr>
+      </table>
+   </body>
+</html>

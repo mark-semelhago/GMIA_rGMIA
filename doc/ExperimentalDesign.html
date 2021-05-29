@@ -1,0 +1,77 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+      <link rel="stylesheet" href="file:////usr/local/MATLAB/R2016b/toolbox/matlab/helptools/private/helpwin.css">
+      <title>MATLAB File Help: ExperimentalDesign</title>
+   </head>
+   <body>
+      <!--Single-page help-->
+      <table border="0" cellspacing="0" width="100%">
+         <tr class="subheader">
+            <td class="headertitle">MATLAB File Help: ExperimentalDesign</td>
+            <td class="subheader-left"><a href="matlab:edit ExperimentalDesign">View code for ExperimentalDesign</a></td>
+            <td class="subheader-left"><a href="matlab:doc ExperimentalDesign">Go to online doc for ExperimentalDesign</a></td>
+            <td class="subheader-right"><a href="matlab:doc">Default Topics</a></td>
+         </tr>
+      </table>
+      <div class="title">ExperimentalDesign</div>
+      <div class="helptext"><pre><!--helptext --> <span class="helptopic">ExperimentalDesign</span> contains the design points, associated simulation information and resulting GMRF MLEs to be used by GMIA and rGMIA.
+    An <span class="helptopic">ExperimentalDesign</span> object stores summary statistics (e.g., MLE
+ estimate of mean). This object is used as an input to run GMIA/rGMIA.</pre></div><!--after help -->
+      <!--Class-->
+      <div class="sectiontitle">Class Details</div>
+      <table class="class-details">
+         <tr>
+            <td class="class-detail-label">Sealed</td>
+            <td>false</td>
+         </tr>
+         <tr>
+            <td class="class-detail-label">Construct on load</td>
+            <td>false</td>
+         </tr>
+      </table>
+      <!--Constructors-->
+      <div class="sectiontitle"><a name="constructors"></a>Constructor Summary
+      </div>
+      <table class="summary-list">
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('ExperimentalDesign.ExperimentalDesign')">ExperimentalDesign</a></td>
+            <td class="m-help">Constructor Method&nbsp;</td>
+         </tr>
+      </table>
+      <!--Properties-->
+      <div class="sectiontitle"><a name="properties"></a>Property Summary
+      </div>
+      <table class="summary-list">
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('ExperimentalDesign.MLE_mean')">MLE_mean</a></td>
+            <td class="m-help">Scalar mean of the GMRF.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('ExperimentalDesign.MLE_precision')">MLE_precision</a></td>
+            <td class="m-help">Dense dx1 vector containing thetas: [\theta_0, \theta_1, ..., \theta_d]&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('ExperimentalDesign.bound_constraints')">bound_constraints</a></td>
+            <td class="m-help">Dense dx2 matrix containing inclusive lower and upper-bounds of box constraints for each dimension.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('ExperimentalDesign.design_points')">design_points</a></td>
+            <td class="m-help">Dense kx1 vector containing linear index of design points, assuming column-major ordering.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('ExperimentalDesign.num_replications')">num_replications</a></td>
+            <td class="m-help">Sparse nx1 number of replications simulated at each solution. Vectorization is done in column-major ordering.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('ExperimentalDesign.response_sum')">response_sum</a></td>
+            <td class="m-help">Sparse nx1 vector containing sum of response after num_replications. Vectorization is done in column-major ordering.&nbsp;</td>
+         </tr>
+         <tr class="summary-item">
+            <td class="name"><a href="matlab:doc('ExperimentalDesign.response_sum_of_square_differences')">response_sum_of_square_differences</a></td>
+            <td class="m-help">Sparse nx1 vector containing sum of square difference between response and mean. Vectorization is done in column-major ordering.&nbsp;</td>
+         </tr>
+      </table>
+   </body>
+</html>

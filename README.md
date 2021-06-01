@@ -16,3 +16,7 @@ Two solvers that use Gaussian Markov random fields (GMRFs) as metamodels for the
 L. Salemi, Peter, et al. "Gaussian Markov random fields for discrete optimization via simulation: Framework and algorithms." Operations Research 67.1 (2019): 250-266.
 
 Semelhago, Mark, et al. "Rapid discrete optimization via simulation with Gaussian Markov random fields." INFORMS Journal on Computing (2020).
+
+## Acknowledgements
+
+This work was partially supported by National Science Foundation Grant Number DMS-1854562.
